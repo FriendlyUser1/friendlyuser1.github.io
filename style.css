@@ -5,6 +5,11 @@ body {
 	overflow: hidden;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+}
+
 /* Text effect */
 h1 {
 	font-family: "Space Mono", monospace;

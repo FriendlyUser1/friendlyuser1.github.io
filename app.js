@@ -1,4 +1,4 @@
-/* Glow effect */
+// Glow effect
 
 const blob = document.getElementById("blob");
 
@@ -14,10 +14,10 @@ window.onpointermove = (event) => {
 	);
 };
 
-/* Text effect */
+// Text effect
 
 let letters = "ABCDEFGHIJKLMNOPRSTUVWXYZ",
-	namet = "ciiro",
+	namet = "ciiro".padStart(9, " ").padEnd(13, " "),
 	interval = null,
 	fin = false;
 
@@ -41,6 +41,7 @@ document.querySelector("h1").onmouseover = (e) => {
 			.join("");
 
 		if (e.target.innerText == namet) {
+			e.target.innerText = namet.replaceAll(" ", "");
 			clearInterval(interval);
 		}
 
@@ -50,7 +51,7 @@ document.querySelector("h1").onmouseover = (e) => {
 	fin = true;
 };
 
-/* Misc */
+// THM
 
 document.getElementsByClassName("thm_link")[0].setAttribute("target", "_blank");
 
