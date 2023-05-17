@@ -8,6 +8,18 @@ body {
 a {
 	color: white;
 	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.content {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 /* Text effect */
@@ -18,23 +30,18 @@ h1 {
 	padding: 0rem clamp(1rem, 2vw, 3rem);
 	border-radius: clamp(0.4rem, 0.75vw, 1rem);
 	margin: 0rem;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	translate: -50% -50%;
 	z-index: 2;
 }
 
 /* Blob */
+
 @keyframes rotate {
 	from {
 		rotate: 0deg;
 	}
-
 	50% {
 		scale: 1 1.5;
 	}
-
 	to {
 		rotate: 360deg;
 	}
@@ -68,10 +75,7 @@ h1 {
 	display: flex !important;
 	align-items: center;
 	justify-content: center;
-	position: absolute;
-	left: 50%;
-	top: 61%;
-	translate: -50% -50%;
+	display: block;
 	z-index: 2;
 }
 
