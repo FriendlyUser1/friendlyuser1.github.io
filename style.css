@@ -1,92 +1,99 @@
+html,
 body {
-	background-color: black;
-	height: 100vh;
-	margin: 0rem;
-	overflow: hidden;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-a {
-	color: white;
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f5f6fa;
+	font-family: system-ui, sans-serif;
+}
+
+.center-card {
+	background: #fff;
+	padding: 2.5rem 2rem;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px 0 #0001;
+	text-align: center;
+	min-width: 300px;
+	max-width: 90vw;
+}
+
+.name {
+	font-size: 2.3rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+	color: #222;
+}
+
+.nickname {
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: #555;
+	margin-bottom: 1rem;
+}
+
+.tagline {
+	font-size: 1.1rem;
+	color: #444;
+	margin-bottom: 1.2rem;
+}
+
+.links a {
+	margin: 0 8px;
+	color: #0056b3;
 	text-decoration: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	font-weight: 500;
+	transition: color 0.2s;
 }
 
-.content {
-	height: 100%;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+.links a:hover {
+	color: #111;
+	text-decoration: underline;
 }
 
-/* Text effect */
-h1 {
-	font-family: "Space Mono", monospace;
-	font-size: clamp(3rem, 10vw, 10rem);
-	color: white;
-	padding: 0rem clamp(1rem, 2vw, 3rem);
-	border-radius: clamp(0.4rem, 0.75vw, 1rem);
-	margin: 0rem;
-	z-index: 2;
+.links a:focus {
+	outline: 2px solid #0056b3;
+	outline-offset: 2px;
 }
 
-/* Blob */
-
-@keyframes rotate {
-	from {
-		rotate: 0deg;
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #121212;
 	}
-	50% {
-		scale: 1 1.5;
+
+	.center-card {
+		background: #1e1e1e;
+		color: #f5f6fa;
 	}
-	to {
-		rotate: 360deg;
+
+	.name {
+		color: #f5f6fa;
 	}
-}
 
-#blob {
-	background-color: white;
-	height: 34vmax;
-	aspect-ratio: 1;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	translate: -50% -50%;
-	border-radius: 50%;
-	background: lime;
-	animation: rotate 20s infinite;
-	opacity: 0.7;
-	z-index: 0;
-}
+	.nickname {
+		color: #bbb;
+	}
 
-#blur {
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	z-index: 1;
-	backdrop-filter: blur(12vmax);
-}
+	.tagline {
+		color: #ccc;
+	}
 
-/* Tryhackme badge */
-#thm_badge {
-	display: flex !important;
-	align-items: center;
-	justify-content: center;
-	display: block;
-	z-index: 2;
-}
+	.links a {
+		color: #bb86fc;
+	}
 
-*:not(.thm_avatar) {
-	background-image: none !important;
-}
+	.links a:hover {
+		color: #ffffff;
+	}
 
-.thm_line {
-	padding: 0px 3px !important;
-}
-
-.thm_link {
-	animation: none !important;
+	.links a:focus {
+		outline: 2px solid #bb86fc;
+		outline-offset: 2px;
+	}
 }
